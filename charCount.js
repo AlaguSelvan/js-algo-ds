@@ -1,13 +1,13 @@
 function charcount(chars) {
   let obj = {}
   for (let i = 0; i < chars.length; i++) {
-    let char = chars[i]
-    if (obj[char] > 0) {
+    if (obj[chars[i]] > 0) {
       obj[char]++
     } else {
       obj[char] = 1
     }
   }
+  console.log(obj)
   return obj
 }
 
@@ -27,10 +27,9 @@ function frequencyCounter(chars) {
 
 function isAlphaNumeric(char){
   let code = char.charCodeAt(0)
-  let validation = !(code > 47 && code < 58) &&
+  if (!(code > 47 && code < 58) &&
     !(code > 64 && code < 91) &&
-    !(code > 96 && code < 123)
-  if (validation) {
+    !(code > 96 && code < 123)) {
        return false
      }
      return true

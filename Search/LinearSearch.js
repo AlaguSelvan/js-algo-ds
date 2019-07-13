@@ -2,7 +2,6 @@ function linearSearch(arr, vals) {
   for (let i in arr) {
     if (arr[i] === vals) {
       return i
-    } else {
     }
   }
   return -1

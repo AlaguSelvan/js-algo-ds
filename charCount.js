@@ -4,10 +4,9 @@ function charcount(chars) {
     if (obj[chars[i]] > 0) {
       obj[char]++
     } else {
-      obj[char] = 1
+      obj[chars] = 1
     }
   }
-  console.log(obj)
   return obj
 }
 
@@ -19,20 +18,20 @@ function frequencyCounter(chars) {
   for (let char of chars) {
     char = char.toLowerCase()
     if (isAlphaNumeric(char)) {
-      obj[char] = ++obj[char] + 1
+      obj[char] = ++obj[char] | 1
     }
   }
   return obj
 }
 
-function isAlphaNumeric(char){
+function isAlphaNumeric(char) {
   let code = char.charCodeAt(0)
   if (!(code > 47 && code < 58) &&
     !(code > 64 && code < 91) &&
     !(code > 96 && code < 123)) {
-       return false
-     }
-     return true
+    return false
+  }
+  return true
 }
 
 frequencyCounter("aabbaacc")

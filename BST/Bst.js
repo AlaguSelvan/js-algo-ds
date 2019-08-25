@@ -5,8 +5,6 @@ class Bst {
     this.right = null
   }
   insert(value) {
-    console.log(value)
-    console.log(this.value)
     if (value < this.value) {
       if (this.left === null) {
         this.left = new Bst(value)

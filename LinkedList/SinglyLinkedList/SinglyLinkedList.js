@@ -83,7 +83,6 @@ class LinkedList {
       return true
     }
     return false
-
   }
   insert(index, val) {
     if (index <= 0 || index >= this.length) return null
